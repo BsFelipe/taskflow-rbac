@@ -11,4 +11,11 @@ export interface IUser extends Document {
   updatedAt: Date;
 }
 
+export type RegisterUserDTO = {
+  name: string;
+  username: string;
+  password: string;
+  role: UserRole;
+}
+
 export default IUser;

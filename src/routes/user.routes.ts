@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import UserController from '../controllers/UserController';
+import { container } from '../container';
 
 const router = Router();
 
-// router.post('/register', UserController.register);
-// router.post('/login', UserController.login);
+router.post('/register', container.userController.register);
+router.post('/login', container.userController.login);
 // outras rotas protegidas depois
 
 export default router;
